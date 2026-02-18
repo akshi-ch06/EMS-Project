@@ -3,6 +3,8 @@ import {Request, Response} from "express"
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
+
+
 const login=async(req: Request, res: Response)=>{
     try{
         const{email, password}=req.body
@@ -33,4 +35,7 @@ const login=async(req: Request, res: Response)=>{
 }
 
 }
-export{login}
+const verify =(req: Request, res: Response)=>{
+    return res.status(200).json({success: true, user: User})
+}
+export{login, verify}

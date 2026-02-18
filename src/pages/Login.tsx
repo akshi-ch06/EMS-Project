@@ -16,11 +16,12 @@ const Login = () => {
         e.preventDefault()
         try{
             const response=await axios.post(
-                "https://localhost:5000/api/auth/login",
+                "http://localhost:5000/api/auth/login",
                 {email, password}
             )
             if(response.data.success){
                 login(response.data.user, response.data.token)
+                console.log(response.data.user)
                 if(response.data.user.role === "admin"){
                     navigate('/admin-dashboard')
                 }else{
