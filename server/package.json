@@ -4,13 +4,15 @@
   "main": "index.tsx",
   "scripts": {
     "start": "nodemon --exec ts-node index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "ts-node userSeed.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "brcypt": "^1.0.1",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
@@ -25,6 +27,7 @@
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.2.3",
     "@types/nodemon": "^1.19.6",
     "ts-node": "^10.9.2",
