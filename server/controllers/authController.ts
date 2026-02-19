@@ -28,9 +28,9 @@ const login=async(req: Request, res: Response)=>{
             user:{_id:user._id, name: user.name, role:user.role}})
     }catch (error) {
     if (error instanceof Error) {
-        res.status(500).json({ message: error.message });
+        res.status(500).json({ message: error.message })
     } else {
-        res.status(500).json({ message: "Something went wrong" });
+        res.status(500).json({ message: "Something went wrong" })
     }
 }
 

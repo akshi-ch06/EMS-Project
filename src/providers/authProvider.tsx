@@ -13,7 +13,16 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     useEffect(()=>{
         const verifyUser=async()=>{
             try{
+
+                // Load cached user first
+                const savedUser = localStorage.getItem("user");
+
+                if (savedUser) {
+                  setUser(JSON.parse(savedUser)); // 👈 instant restore
+                }
+
                 const token=localStorage.getItem('token')
+
                 if (token){
                 const response=await axios.get(
                     "http://localhost:5000/api/auth/verify",{
@@ -26,6 +35,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
                     }
                 }else{
                     setUser(null)
+                    setLoading(false)
                 }
             }catch(error){
                 if (error instanceof AxiosError) {
@@ -42,12 +52,14 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
 
     const login = (userData: User, token: string) => {
         setUser(userData);
-        localStorage.setItem("token", token);
+        localStorage.setItem("token", token)
+        localStorage.setItem("user", JSON.stringify(userData))
     };
 
     const logout = () => {
         setUser(null);
-        localStorage.removeItem("token");
+        localStorage.removeItem("token")
+        localStorage.removeItem("user")
     };
 
     return (

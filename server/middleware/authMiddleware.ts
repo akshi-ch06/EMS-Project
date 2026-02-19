@@ -26,7 +26,7 @@ const verifyUser = async (
         }
     
         // 2️⃣ Extract token properly
-        const token = authHeader.split(" ")[1];
+        const token = authHeader.split(" ")[10];
     
         // 3️⃣ Check JWT secret
         const secret = process.env.JWT_KEY;
