@@ -139,9 +139,20 @@ const Login = () => {
                     flex-row
                     gap-3
                     ">
-                        <input type="checkbox"/>
-                        <p>Remember Me</p>
-                        <p className="text-teal-600">Forget password?</p>
+                        <input
+                        type="checkbox"
+                        className="
+                        w-[5%]
+                        "/>
+                        <p className="
+                        w-[50%]
+                        ">Remember Me</p>
+                        <p className="
+                        w-[45%]
+                        flex
+                        justify-end
+                        text-teal-500
+                        ">Forget password?</p>
                     </div>
                     <button
                     className="
