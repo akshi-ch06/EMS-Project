@@ -10,7 +10,12 @@ const Navbar = () => {
         h-12
         bg-teal-600
         ">
-            <p>Welcome</p>
+            <p className="
+                text-2xl
+                text-white
+                text-center
+                font-pacific
+                ">Welcome</p>
             <button className="
             px-4
             py-1
