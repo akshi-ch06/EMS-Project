@@ -12,7 +12,7 @@ const Login = () => {
     const {login}=useAuth()
     const navigate=useNavigate()
     
-    const handleSubmit= async(e:React.SubmitEvent)=>{
+    const handleSubmit= async(e:React.SubmitEvent<HTMLFormElement>)=>{
         e.preventDefault()
         try{
             const response=await axios.post(
