@@ -7,5 +7,5 @@ const departmentSchema= new mongoose.Schema({
     updateAt: {type:Date, default: Date.now}
 })
 
-const Department = mongoose.model("User", departmentSchema)
+const Department = mongoose.model("department", departmentSchema)
 export default Department
