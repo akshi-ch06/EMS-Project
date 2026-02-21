@@ -1,8 +1,9 @@
 //import { Navigate } from "react-router-dom"
 //import { useAuth } from "../context/useAuth"
 import AdminSidebar from "../components/dashboard/AdminSidebar"
-import AdminSummary from "../components/dashboard/AdminSummary"
+//import AdminSummary from "../components/dashboard/AdminSummary"
 import Navbar from "../components/dashboard/Navbar"
+import { Outlet } from "react-router-dom";
 
 const AdminDashboard = () => {
     // const {user, loading}= useAuth()
@@ -21,8 +22,8 @@ const AdminDashboard = () => {
             bg-gray-100
             h-screen
             ">
-                <Navbar/>
-                <AdminSummary/>
+                <Navbar/>{/* Child Routes Render Here */}
+                <Outlet />
             </div>
         </div>
 
