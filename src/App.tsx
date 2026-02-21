@@ -6,7 +6,7 @@ import EmployeeDashboard from './pages/EmployeeDashboard'
 import PrivateRoutes from './utils/PrivateRoutes'
 import RoleBaseRoutes from './utils/RoleBaseRoutes'
 import AdminSummary from './components/dashboard/AdminSummary'
-import AddDepartment from './components/Deaprtments/AddDepartment'
+import AddDepartment from './components/Departments/AddDepartment'
 
 function App() {
 
