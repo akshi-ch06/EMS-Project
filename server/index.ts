@@ -5,7 +5,7 @@ import express from 'express'
 import cors from 'cors'
 import authRouter from './routes/auth'
 import connectToDatabase from './db/db'
-import departmentRouter from './routes/department.ts'
+import departmentRouter from './routes/department'
 
 connectToDatabase()
 const app = express();
